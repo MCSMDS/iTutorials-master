@@ -1,0 +1,21 @@
+version:
+  bootstrap: 4.3.1
+
+collections:
+  tutorials:
+    output: true
+    permalink: /:path
+  assets:
+    output: true
+
+defaults:
+  - scope:
+      path: ""
+      type: "tutorials"
+    values:
+      layout: "tutorials"
+  - scope:
+      path: ""
+    values:
+      layout: "default"
+      development: false

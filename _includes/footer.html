@@ -1,0 +1,11 @@
+<!-- 页脚 -->
+<hr/>
+<p class="text-center text-primary d-md-none"><a id="cm" style="display:none">电脑视窗</a></p>
+<p class="text-center">Copyright MCSMDS All Right Reserved</p>
+<div class="mb-4"></div>
+<script>
+if(getSystem()!="desktop")document.getElementById("cm").style.display="block";
+$("#cm").click(function(){
+$("meta[name='viewport']").attr('content',"width=1200px,initial-scale=1,shrink-to-fit=no");
+});
+</script>

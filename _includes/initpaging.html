@@ -1,0 +1,19 @@
+{%- assign thisPath = page.path|remove:".md"|split:"/" -%}
+{%- assign thisPage = thisPath[2] -%}
+{%- assign thisType = thisPath[1] -%}
+{%- assign thisDMap = site.data[thisType] -%}
+{%- assign thisEMap = thisDMap|map:"pages"|map:"path" -%}
+
+{%- for item in thisEMap -%}
+{%- if item == thisPage -%}
+{%- assign thisPN = forloop.index0 -%}
+{%- endif -%}
+{%- endfor -%}
+
+{%- assign thisLPN = thisPN|minus:1 -%}
+{%- assign thisNPN = thisPN|plus:1 -%}
+
+{%- assign thisLPName = thisEMap[thisLPN] -%}
+{%- assign thisNPName = thisEMap[thisNPN] -%}
+
+{%- assign thisESize = thisEMap|size|minus:1 -%}

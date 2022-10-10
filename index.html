@@ -1,0 +1,27 @@
+---
+keywords: iTutorials
+description: iTutorials好多网友都推荐发现过了，内容不错，有点逼格。
+---
+{% include topnav.html %}
+
+<div class="container-fluid" class="max-width:1140">
+<div class="row">
+{% for item in site.data.menu %}
+<!-- 卡片 -->
+<div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-3">
+<div class="card shadow-sm h-100" style="border:1px solid #eee">
+<div class="card-body">
+<h5 class="card-title text-primary">{{item.name}}</h5>
+<p class="card-text">{{item.description|replace:"<bi/>","&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"}}</p>
+</div>
+<div class="card-footer bg-transparent border-0">
+<a class="btn btn-outline-primary btn-block shadow-sm setsses" href="{{item.href}}">{{item.name}}教程</a>
+</div>
+</div>
+</div>
+{% endfor %}
+</div>
+
+{% include footer.html %}
+
+</div>

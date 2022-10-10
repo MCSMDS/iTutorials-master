@@ -1,0 +1,4 @@
+<ul class="nav flex-column nav-pills border-right p-3">{% for items in thisDMap %}
+<span class="navbar-text h4">{{items.title}}</span>{% for item in items.pages %}
+<li class="nav-item"><a class="nav-link{% if item.path == thisPage %} active{% endif %}" href="{{item.path}}">{{item.name}}</a></li>{% endfor %}{% endfor %}
+</ul>

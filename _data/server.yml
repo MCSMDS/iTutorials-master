@@ -1,0 +1,10 @@
+ - title: 入门
+   pages:
+    - path: index
+      name: 简介
+    - path: host
+      name: 主机
+    - path: domain
+      name: 域名
+    - path: build
+      name: 开始搭建

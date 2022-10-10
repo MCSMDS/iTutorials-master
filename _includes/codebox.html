@@ -1,0 +1,19 @@
+{%- if include.mode=="all" -%}
+<div class="codebox">
+{% include codebox.html content=include.content mode="eg" type=include.type %}
+{% include codebox.html content=include.content mode="code" type=include.type %}
+</div>{%- elsif include.mode=="eg" -%}
+<div class="example">{{-include.content-}}
+</div>{%- elsif include.mode=="code" -%}
+<div class="clipboard" data-toggle="tooltip" data-placement="left" title="点击复制">
+{%- case include.type -%}
+{%- when "html" -%}
+{%- highlight html -%}
+{{- include.content -}}
+{%- endhighlight -%}
+{%- when "js" -%}
+{%- highlight js -%}
+{{- include.content -}}
+{%- endhighlight -%}
+{%- endcase -%}
+</div>{%- endif -%}

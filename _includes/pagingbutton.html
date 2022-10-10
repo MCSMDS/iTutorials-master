@@ -1,0 +1,21 @@
+<!-- 分页按钮 -->
+<div class="form-inline d-md-none {% if include.type == "top" %}mb-3{% endif %}{% if include.type == "bottom" %}mt-3{% endif %}">
+<!-- 上一页 -->
+<div class="w-50 px-3">
+<div class="mx-auto d-block d-sm-none">
+<a class="btn btn-outline-primary btn-block shadow-sm{% if thisPN == 0 %} disabled{% else %}" href="/{{thisType}}/{{thisLPName}}{% endif %}" role="button">上一页</a>
+</div>
+<div class="w-50 mx-auto d-none d-sm-block">
+<a class="btn btn-outline-primary btn-block shadow-sm{% if thisPN == 0 %} disabled{% else %}" href="/{{thisType}}/{{thisLPName}}{% endif %}" role="button">上一页</a>
+</div>
+</div>
+<!-- 下一页 -->
+<div class="w-50 px-3">
+<div class="mx-auto d-block d-sm-none">
+<a class="btn btn-outline-primary btn-block shadow-sm{% if thisPN == thisESize %} disabled{% else %}" href="/{{thisType}}/{{thisNPName}}{% endif %}" role="button">下一页</a>
+</div>
+<div class="w-50 mx-auto d-none d-sm-block">
+<a class="btn btn-outline-primary btn-block shadow-sm{% if thisPN == thisESize %} disabled{% else %}" href="/{{thisType}}/{{thisNPName}}{% endif %}" role="button">下一页</a>
+</div>
+</div>
+</div>

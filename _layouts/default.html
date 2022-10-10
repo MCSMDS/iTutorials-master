@@ -1,0 +1,55 @@
+ <!doctype html>
+<html lang="zh">
+
+<head>
+
+<!-- 信息标签 -->
+<meta charset="utf-8"/>
+<title>{% if page.title %}{{page.title}} | {% endif %}iTutorials</title>
+<meta name="keywords" content="{{page.keywords}}"/>
+<meta name="description" content="{{page.description}}"/>
+<link rel="icon" href="/assets/img/favicon.ico" type="image/x-icon"/>
+<link rel="shortcut icon" href="/assets/img/favicon.ico" type="image/x-icon"/>
+<meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no"/>{% if page.url=="/" %}
+<meta name="google-site-verification" content="K8bfgNhzyAjTTy-a9ixzOtFiwmnIiFjPa58FbXSUH-8"/>{% endif %}
+
+<!-- 表现标签 -->
+<link rel="stylesheet" href="/assets/css/bootstrap.css"/>
+<link rel="stylesheet" href=/"assets/css/tipbox.css"/>
+<link rel="stylesheet" href="/assets/css/codebox.css"/>
+<link rel="stylesheet" href="/assets/css/itutorials.css"/>
+
+<!-- 行为标签 -->
+<script src="/assets/js/jquery.js"></script>
+<script src="/assets/js/bootstrap.js"></script>
+<script src="/assets/js/clipboard.js"></script>
+<script src="/assets/js/holder.js"></script>
+<script src="/assets/js/itutorials.js"></script>
+
+<!-- 开发者模式 -->
+<script>
+window.onload=function()
+{
+if(localStorage.shouldReload=="true"&&{{page.development}})
+{
+if(window.navigator.onLine)localStorage.shouldReload="false";
+window.location.reload();
+}else if({{page.development}}){
+localStorage.shouldReload="true";
+document.getElementById("body").style.display="block";
+}else{
+localStorage.clear();
+document.getElementById("body").style.display="block";
+}
+}
+</script>
+
+</head>
+
+<body id="body" style="display:none" data-spy="scroll" data-target="#fragment" data-offset="72">
+
+{{ content }}
+
+</body>
+
+</html>

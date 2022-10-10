@@ -1,0 +1,40 @@
+---
+layout: default
+---
+{%- include initpaging.html -%}
+{% include topnav.html %}
+
+<div class="container-fluid" class="max-width:1140px">
+<div class="row">
+
+<!-- 菜单导航 -->
+<div class="d-none d-md-block col-md-3 col-xl-2 mb-3 scrollable-y sticky-navBack">
+{% include leftnav.html %}
+</div>
+
+<!-- 正文 -->
+<div class="col-md-9 col-xl-8 mb-3">
+
+{% include pagingbutton.html type="top" %}
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle" style="display:block;text-align:center;" data-ad-layout="in-article" data-ad-format="fluid" data-ad-client="ca-pub-4867986211482490" data-ad-slot="8944069309"></ins>
+<script>(adsbygoogle=window.adsbygoogle||[]).push({})</script>
+
+<!-- 内容 -->
+{{content}}
+{% include pagingbutton.html type="bottom" %}
+
+</div>
+
+<!-- 锚点导航 -->
+<div class="d-none d-xl-block col-xl-2 mb-3 scrollable-y sticky-navBack">
+{% include rightnav.html %}
+</div>
+
+</div>
+
+<div class="row mb-3"></div>
+
+{% include footer.html %}
+
+</div>

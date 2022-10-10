@@ -1,0 +1,4 @@
+<ul id="fragment" class="nav flex-column nav-pills border-left p-3">{% for items in page.fragment %}
+<span class="navbar-text h4">{{items.title}}</span>{% for item in items.frags %}
+<li class="nav-item"><a class="nav-link" href="#{{item}}">{{item}}</a></li>{% endfor %}{% endfor %}
+</ul>
